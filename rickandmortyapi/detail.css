@@ -1,0 +1,58 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    background-color: #fafafa;
+    background-image: url('arkaplan6.png');
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fafafa;
+}
+
+#character-detail img {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+#character-detail img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+}
+
+#character-detail {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 0 20px;
+  }
+  
+
+/* Taşlar */
+.falling-rock {
+    position: fixed;
+    top: -100px;
+    width: 30px;
+    height: 30px;
+    background-image: url('kaya.png');
+    background-size: cover;
+    z-index: 0;
+    animation: fall linear infinite;
+    opacity: 0.9;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg); /* saat yönü */
+    }
+}
+
